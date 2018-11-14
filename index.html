@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	
+	<meta charset="UTF-8">
+
+	<title>Cálculo de IVA</title>
+</head>
+<body>
+	
+	<div id="contenido">
+		<h2>Cálculo de IVA</h2>
+		
+		<div id="errorIVA"></div>
+		
+		NOMBRE  :<br>	
+		<input class="form-control" type="text" id="nombre"  ><br><br>
+		
+		CANTIDAD:<br>	
+		<input class="form-control" type="text" id="cantidad" onKeyPress="return soloNumeros(event)"><br><br>
+
+		PRECIO  :<br>	
+		<input class="form-control" type="text" id="precio" onKeyPress="return soloNumeros(event)"><br><br>
+		DESCUENTO % :<br>	
+		<input class="form-control" type="text" id="descuento" onKeyPress="return soloNumeros(event)"  ><br><br>
+		
+
+		
+		<input type="button" class="btn btn-primary" value="calcular" onclick="calculoIVA()">
+		<input type="button" class="btn btn-primary2" value="limpiar" onclick="limpiar()">
+
+		
+		<h2>RESULTADO</h2>
+		NETO  :<br>	
+		<input class="form-control" type="text" id="neto" readonly><br><br>
+		IVA:<br>	
+		<input class="form-control" type="text" id="iva" readonly><br><br>
+		TOTAL FINAL:<br>	
+		<input class="form-control" type="text" id="totalfinal" readonly ><br><br>
+	</div>
+</body>
+</html>
